@@ -1,0 +1,21 @@
+<idea-plugin>
+    <id>io.github.ksch_workflows.snippets</id>
+    <name>K.S.C.H. Workflow Snippets</name>
+    <vendor email="info@experimental-software.com" url="https://ksch-workflows.github.io">KS Plus e.V.</vendor>
+
+    <description><![CDATA[
+        Dart and Java snippet for the development on the K.S.C.H. Workflows project.
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
