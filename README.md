@@ -10,6 +10,8 @@ https://github.com/ksch-workflows/snippets/releases/latest/download/snippets.zip
 
 2. Install Plugin from disk...
 
+https://www.jetbrains.com/help/idea/managing-plugins.html#install_plugin_from_disk
+
 ## Dart snippets
 
 | Keyword | Description |

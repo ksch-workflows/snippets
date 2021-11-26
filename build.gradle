@@ -11,19 +11,20 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
 
-// See https://github.com/JetBrains/gradle-intellij-plugin/
+// See https://github.com/JetBrains/gradle-intellij-plugin#intellij-platform-properties
 intellij {
     version = '2021.2.3'
 }
+
+// See https://github.com/JetBrains/gradle-intellij-plugin#patching-dsl
 patchPluginXml {
-    changeNotes = """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+    sinceBuild = '200.*'
 }
+
 test {
     useJUnitPlatform()
 }
