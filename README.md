@@ -48,7 +48,7 @@ Then register the new file in the `extensions` tag of [`plugin.xml`](src/main/re
 Prepare environment variables:
 
 ```
-NEXT_RELEASE_VERSION=0.1.4
+NEXT_RELEASE_VERSION=0.1.5
 NEXT_SNAPSHOT_VERSION=
 ```
 
@@ -75,7 +75,7 @@ Update main branch:
 git checkout main
 
 sed -i 's/'${NEXT_RELEASE_VERSION}'-SNAPSHOT/'${NEXT_SNAPSHOT_VERSION}'-SNAPSHOT/g' build.gradle
-sed -i 's/NEXT_RELEASE_VERSION=\d+\.\d+\.\d+/NEXT_RELEASE_VERSION='${NEXT_SNAPSHOT_VERSION}'/' README.md
+sed -i -E 's/NEXT_RELEASE_VERSION=[0-9]+\.[0-9]+\.[0-9]+/NEXT_RELEASE_VERSION='${NEXT_SNAPSHOT_VERSION}'/' README.md
 
 git add .
 git commit -m "Upgrade to next snapshot version"
