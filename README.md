@@ -14,10 +14,9 @@ https://www.jetbrains.com/help/idea/managing-plugins.html#install_plugin_from_di
 
 ## Dart snippets
 
-| Keyword | Description |
-|---------|-------------|
-| `uuid` | Generate a UUID |
-| `toTest` | Add a reminder to create a unit test |
+- `uuid`: Add random UUID
+- `toTest`: Add TODO comment with reminder to create a unit test
+- `testWidgets`: Add minimal widget test
 
 ## Java snippets
 

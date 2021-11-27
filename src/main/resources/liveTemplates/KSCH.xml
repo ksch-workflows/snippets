@@ -10,4 +10,9 @@
             <option name="DART" value="true" />
         </context>
     </template>
+    <template name="testWidgets" value="testWidgets(&quot;$END$&quot;, (WidgetTester tester) async {&#10;    await tester.open(ExampleStepper());&#10;    &#10;    await goToNextStep(tester);&#10;    &#10;    assertSecondPage(tester);&#10;});" description="Add minimal widget test" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="DART" value="true" />
+        </context>
+    </template>
 </templateSet>
