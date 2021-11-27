@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="K.S.C.H. Workflows - Dart">
+  <template name="extension" value="extension $NAME$ on $TYPE$ {&#10;&#10;}" description="Add new class extension" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="for" value="for (var $VAR$ in $CONTAINER$) {&#10;  &#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTAINER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="get" value="$TYPE$ get $PROPERTY_NAME$ {&#10;  return null!;&#10;}" description="Generate getter" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROPERTY_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="group" value="group('$END$', () {&#10;&#10;});" description="Add a new test group" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="test" value="test('$END$', () {&#10;  &#10;});" description="Add a new unit test case" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="test_main" value="import &quot;package:test/test.dart&quot;;&#10;&#10;void main() {&#10;  test(&quot;$END$String.split() splits the string on the delimiter&quot;, () {&#10;    var string = &quot;foo,bar,baz&quot;;&#10;    expect(string.split(&quot;,&quot;), equals([&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]));&#10;  });&#10;&#10;  test(&quot;String.trim() removes surrounding whitespace&quot;, () {&#10;    var string = &quot;  foo &quot;;&#10;    expect(string.trim(), equals(&quot;foo&quot;));&#10;  });&#10;}" description="Scaffold for a unit test file" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+</templateSet>

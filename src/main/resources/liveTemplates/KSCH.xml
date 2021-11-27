@@ -1,18 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="KSCH">
-    <template name="toTest" value="// TODO(test): $END$" description="Reminder to create a unit test" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="DART" value="true" />
-            <option name="JAVA_CODE" value="true" />
-        </context>
-    </template>
-    <template name="uuid" value="const Uuid().v4()" description="Custom snippet for random UUID" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="DART" value="true" />
-        </context>
-    </template>
-    <template name="testWidgets" value="testWidgets(&quot;$END$&quot;, (WidgetTester tester) async {&#10;    await tester.open(ExampleStepper());&#10;    &#10;    await goToNextStep(tester);&#10;    &#10;    assertSecondPage(tester);&#10;});" description="Add minimal widget test" toReformat="true" toShortenFQNames="true">
-        <context>
-            <option name="DART" value="true" />
-        </context>
-    </template>
+  <template name="toTest" value="// TODO(test): $END$" description="Reminder to create a unit test" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="uuid" value="const Uuid().v4()" description="Custom snippet for random UUID" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="testWidgets" value="testWidgets(&quot;$END$&quot;, (WidgetTester tester) async {&#10;    await tester.open(ExampleStepper());&#10;    &#10;    await goToNextStep(tester);&#10;    &#10;    assertSecondPage(tester);&#10;});" description="Add minimal widget test" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
 </templateSet>
