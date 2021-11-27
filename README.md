@@ -1,6 +1,6 @@
 # IntelliJ Snippets
 
-Dart and Java snippet for the development on the K.S.C.H. Workflows project for IntelliJ and Android Studio.
+Dart and Java snippets for the development on the K.S.C.H. Workflows project for IntelliJ and Android Studio.
 
 ## Installation
 
