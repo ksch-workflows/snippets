@@ -48,7 +48,7 @@ Then register the new file in the `extensions` tag of [`plugin.xml`](src/main/re
 Prepare environment variables:
 
 ```
-NEXT_RELEASE_VERSION=0.1.5
+NEXT_RELEASE_VERSION=0.1.6
 NEXT_SNAPSHOT_VERSION=
 ```
 
