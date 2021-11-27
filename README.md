@@ -40,3 +40,41 @@ To create a new template group, create a new XML file in that directory and then
 ```
 
 Then register the new file in the `extensions` tag of [`plugin.xml`](src/main/resources/META-INF/plugin.xml).
+
+## Maintenance
+
+### Create release
+
+Prepare environment variables:
+
+```
+RELEASE_VERSION=0.1.2
+NEXT_VERSION=
+```
+
+Create release tag:
+
+```
+git checkout -b release/${RELEASE_VERSION}
+
+sed -i 's/'${RELEASE_VERSION}'-SNAPSHOT/'${RELEASE_VERSION}'/g' build.gradle
+
+git add build.gradle
+git commit -m "Release snippets version ${RELEASE_VERSION}"
+
+git tag $RELEASE_VERSION
+git push origin --tags
+```
+
+Update main branch:
+
+```
+git checkout main
+
+sed -i 's/'${RELEASE_VERSION}'-SNAPSHOT/'${NEXT_VERSION}'-SNAPSHOT/g' build.gradle
+sed -i 's/'RELEASE_VERSION=.*'/'RELEASE_VERSION='${NEXT_VERSION}'/g' README.md
+
+git add build.gradle
+git commit -m "Upgrade to next snapshot version"
+git push origin
+```
