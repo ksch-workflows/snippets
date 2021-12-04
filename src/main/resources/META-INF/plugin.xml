@@ -12,8 +12,11 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplates file="/liveTemplates/DartTest.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/FlutterTest.xml"/>
         <defaultLiveTemplates file="/liveTemplates/KSCH.xml"/>
         <defaultLiveTemplates file="/liveTemplates/KschDart.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/KschFlutter.xml"/>
     </extensions>
 
     <actions>

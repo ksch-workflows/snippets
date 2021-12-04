@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="KSCH - Flutter">
+  <template name="FAB" value="FloatingActionButton(&#10;      onPressed: () {&#10;        // Add your onPressed code here!&#10;      },&#10;      child: const Icon(Icons.navigation),&#10;      backgroundColor: Colors.green,&#10;    )" description="Add floating action button" toReformat="true" toShortenFQNames="true">
+    <context>
+      
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="fixme" value="// FIXME: $END$" description="Add critical TODO comment" toReformat="true" toShortenFQNames="true">
+    <context>
+      
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="register_service" value="GetIt.I.registerSingleton&lt;$TYPE$&gt;($OBJECT$);" description="Add GetIt statement for registering a singleton service" toReformat="true" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="todo" value="// TODO: $END$" description="Add a TODO comment" toReformat="true" toShortenFQNames="true">
+    <context>
+      
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="todo_test" value="// TODO(test): $END$" description="Reminder to create a unit test" toReformat="true" toShortenFQNames="true">
+    <context>
+      
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="ValueKey" value="const ValueKey('$END$')" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>

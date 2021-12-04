@@ -34,7 +34,7 @@ To create a new template group, create a new XML file in that directory and then
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<templateSet group="K.S.C.H. Workflows - Dart">
+<templateSet group="KSCH - Foo - Bar">
 
 </templateSet>
 ```

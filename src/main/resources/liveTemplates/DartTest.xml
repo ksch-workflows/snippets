@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="KSCH - Dart - Test">
+  <template name="expect_equals" value="expect($ACTUAL$, equals($EXPECTED$));" description="Add snippet for equals assertion" toReformat="true" toShortenFQNames="true">
+    <variable name="ACTUAL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EXPECTED" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="expect_false" value="expect(false, isFalse);" description="Assert that a value is false" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="expect_true" value="expect(true, isTrue);" description="Assert that a value is true" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+</templateSet>

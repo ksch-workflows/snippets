@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="KSCH - Flutter - Test">
+  <template name="tester_enter_text" value="await tester.enterText(&#10;      find.byKey(const ValueKey('$KEY$')),&#10;      '$TEXT$',&#10;    );" description="Request the tester to enter text in an input field" toReformat="true" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="tester_get_text" value="find.byKey(const ValueKey('$KEY$')).evaluate().single.widget as Text" description="Read text from the current page" toReformat="true" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="tester_tap_button" value="await tester.tap(find.byKey(const ValueKey('$KEY$')));&#10;await tester.pumpAndSettle();&#10;" description="Request the tester to click a button" toReformat="true" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="tester_tap_icon" value="await tester.tap(&#10;      find.descendant(&#10;        of: find.byType(IconButton),&#10;        matching: find.byIcon(Icons.house),&#10;      ),&#10;    );" description="Request the tester to tap an icon" toReformat="true" toShortenFQNames="true">
+    <context>
+      
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="tester_wait" value="await tester.pumpAndSettle();" description="Request the tester to pump and settle" toReformat="true" toShortenFQNames="true">
+    <context>
+      
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="testWidgets" value="testWidgets('$END$', (tester) async {&#10;    tester.binding.window.textScaleFactorTestValue = 0.2;&#10;&#10;    var widget = Text('Hello, Widget!');&#10;&#10;    await tester.pumpWidget(TestBench(&#10;      child: widget,&#10;      pageSize: Size(800, 600),&#10;    ));&#10;&#10;    expect(find.byType(Text), findsWidgets);&#10;  });" description="Add new widget test" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="expect_widget" value="expect(find.byKey(const ValueKey('$KEY$')), findsOneWidget);" description="Add assertion that a widget can be found" toReformat="true" toShortenFQNames="true">
+  <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+  <context>
+    <option name="Bloc" value="true" />
+    <option name="DART_STATEMENT" value="true" />
+    <option name="DART_TOPLEVEL" value="true" />
+  </context>
+</template>
+</templateSet>
