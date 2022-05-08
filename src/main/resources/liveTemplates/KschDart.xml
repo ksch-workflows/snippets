@@ -26,7 +26,7 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="test" value="test('$END$', () {&#10;  &#10;});" description="Add a new unit test case" toReformat="false" toShortenFQNames="true">
+  <template name="test" value="test('$END$', () {&#10;  expect(true, equals(true));&#10;});" description="Add a new unit test case" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="DART" value="true" />
     </context>
