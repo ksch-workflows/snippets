@@ -31,8 +31,9 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="test_main" value="import &quot;package:test/test.dart&quot;;&#10;&#10;void main() {&#10;  test(&quot;$END$String.split() splits the string on the delimiter&quot;, () {&#10;    var string = &quot;foo,bar,baz&quot;;&#10;    expect(string.split(&quot;,&quot;), equals([&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]));&#10;  });&#10;&#10;  test(&quot;String.trim() removes surrounding whitespace&quot;, () {&#10;    var string = &quot;  foo &quot;;&#10;    expect(string.trim(), equals(&quot;foo&quot;));&#10;  });&#10;}" description="Scaffold for a unit test file" toReformat="false" toShortenFQNames="true">
+  <template name="test_main" value="import 'package:test/test.dart';&#10;&#10;void main() {&#10;  $END$&#10;}" description="Scaffold for a unit test file" toReformat="false" toShortenFQNames="true">
     <context>
+      <option name="DART" value="true" />
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
