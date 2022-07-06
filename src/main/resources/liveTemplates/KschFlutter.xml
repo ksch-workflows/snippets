@@ -1,15 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="KSCH - Flutter">
+  <template name="tester_enter_text" value="await tester.enterText(&#10;      find.byKey(const ValueKey('$KEY$')),&#10;      '$TEXT$',&#10;    );" description="Request the tester to enter text in an input field" toReformat="true" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="tester_get_text" value="find.byKey(const ValueKey('$KEY$')).evaluate().single.widget as Text" description="Read text from the current page" toReformat="true" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="tester_tap_button" value="await tester.tap(find.byKey(const ValueKey('$KEY$')));&#10;await tester.pumpAndSettle();&#10;" description="Request the tester to click a button" toReformat="true" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="tester_tap_icon" value="await tester.tap(&#10;      find.descendant(&#10;        of: find.byType(IconButton),&#10;        matching: find.byIcon(Icons.house),&#10;      ),&#10;    );" description="Request the tester to tap an icon" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="tester_wait" value="await tester.pumpAndSettle();" description="Request the tester to pump and settle" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="testWidgets" value="testWidgets('$END$', (tester) async {&#10;    tester.binding.window.textScaleFactorTestValue = 0.2;&#10;&#10;    var widget = Text('Hello, Widget!');&#10;&#10;    await tester.pumpWidget(TestBench(&#10;      child: widget,&#10;      pageSize: Size(800, 600),&#10;    ));&#10;&#10;    expect(find.byType(Text), findsWidgets);&#10;  });" description="Add new widget test" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="expect_widget" value="expect(find.byKey(const ValueKey('$KEY$')), findsOneWidget);" description="Add assertion that a widget can be found" toReformat="true" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Bloc" value="true" />
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="extension" value="extension $NAME$ on $TYPE$ {&#10;&#10;}" description="Add new class extension" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="for" value="for (var $VAR$ in $CONTAINER$) {&#10;  &#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTAINER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="get" value="$TYPE$ get $PROPERTY_NAME$ {&#10;  return null!;&#10;}" description="Generate getter" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROPERTY_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="group" value="group('$END$', () {&#10;&#10;});" description="Add a new test group" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="test" value="test('$END$', () {&#10;  expect(true, equals(true));&#10;});" description="Add a new unit test case" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="test_main" value="import 'package:test/test.dart';&#10;&#10;void main() {&#10;  $END$&#10;}" description="Scaffold for a unit test file" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
   <template name="FAB" value="FloatingActionButton(&#10;      onPressed: () {&#10;        // Add your onPressed code here!&#10;      },&#10;      child: const Icon(Icons.navigation),&#10;      backgroundColor: Colors.green,&#10;    )" description="Add floating action button" toReformat="true" toShortenFQNames="true">
     <context>
-      
       <option name="DART_STATEMENT" value="true" />
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
   <template name="fixme" value="// FIXME: $END$" description="Add critical TODO comment" toReformat="true" toShortenFQNames="true">
     <context>
-      
       <option name="DART_STATEMENT" value="true" />
       <option name="DART_TOPLEVEL" value="true" />
     </context>
@@ -18,28 +100,24 @@
     <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      
       <option name="DART_STATEMENT" value="true" />
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
   <template name="todo" value="// TODO: $END$" description="Add a TODO comment" toReformat="true" toShortenFQNames="true">
     <context>
-      
       <option name="DART_STATEMENT" value="true" />
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
   <template name="todo_test" value="// TODO(test): $END$" description="Reminder to create a unit test" toReformat="true" toShortenFQNames="true">
     <context>
-      
       <option name="DART_STATEMENT" value="true" />
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
   <template name="ValueKey" value="const ValueKey('$END$')" description="" toReformat="true" toShortenFQNames="true">
     <context>
-      
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
