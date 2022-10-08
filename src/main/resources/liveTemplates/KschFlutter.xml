@@ -34,7 +34,7 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="testWidgets" value="testWidgets('$END$', (tester) async {&#10;    tester.binding.window.textScaleFactorTestValue = 0.2;&#10;&#10;    var widget = Text('Hello, Widget!');&#10;&#10;    await tester.pumpWidget(TestBench(&#10;      child: widget,&#10;      pageSize: Size(800, 600),&#10;    ));&#10;&#10;    expect(find.byType(Text), findsWidgets);&#10;  });" description="Add new widget test" toReformat="true" toShortenFQNames="true">
+  <template name="testWidgets" value="testWidgets('$END$', (tester) async {&#10;    tester.binding.window.platformDispatcher.textScaleFactorTestValue = 0.2;&#10;    &#10;    var widget = Text('Hello, Widget!');&#10;    await tester.pumpWidget(WidgetTestApp(widget));&#10;    &#10;    expect(find.byType(Text), findsWidgets);&#10;});" description="Add new widget test" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="DART" value="true" />
     </context>
